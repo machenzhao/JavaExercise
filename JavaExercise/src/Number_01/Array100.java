@@ -1,8 +1,6 @@
 package Number_01;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Array100 {
     /*
@@ -24,7 +22,7 @@ public class Array100 {
         for (int i = 0; i < size; i++) {
             double randomDouble = Math.random();
             int randomInt = (int) Math.round(randomDouble * range);
-            randomInt = randomInt == 0 ? 100 : randomInt;
+            randomInt = randomInt == 0 ? range : randomInt;
             randomIntArray[i] = randomInt;
         }
         return randomIntArray;
@@ -221,7 +219,7 @@ public class Array100 {
             System.out.println("10");
             int[] array10 = randomIntArray.clone();
 
-            System.out.println("归并排序法");
+            System.out.println("使用归并排序法");
             beginTime = System.currentTimeMillis();
             getRepeatNum1(array10);
             endTime = System.currentTimeMillis();
