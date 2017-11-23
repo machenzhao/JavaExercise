@@ -5,6 +5,7 @@ import Number_01.Utility.mergeSort;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Array100W {
     /*
@@ -184,6 +185,11 @@ public class Array100W {
             System.out.println("使用归并排序法");
             beginTime = System.currentTimeMillis();
             mergeSort.mergeSortArray(arrTxt.clone());
+            endTime = System.currentTimeMillis();
+            System.out.println("耗时（毫秒）：" + (endTime - beginTime));
+            System.out.println("使用JDK Array排序法");
+            beginTime = System.currentTimeMillis();
+            Arrays.sort(arrTxt.clone());
             endTime = System.currentTimeMillis();
             System.out.println("耗时（毫秒）：" + (endTime - beginTime));
             System.out.println("结束");
